@@ -1,5 +1,4 @@
 import 'package:flutter_mvvm_demo/home/model/user_model.dart';
-import 'package:flutter_mvvm_demo/home/vo/user_vo.dart';
 
 abstract class HomeState {
 

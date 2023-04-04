@@ -1,5 +1,8 @@
 enum UserState {
-  PENDING,
-  APPROVED,
-  REJECTED
+  pending("PENDING"),
+  approved("APPROVED"),
+  rejected("REJECTED");
+
+  final String apiValue;
+  const UserState(this.apiValue);
 }

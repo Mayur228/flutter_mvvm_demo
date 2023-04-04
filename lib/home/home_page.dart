@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_mvvm_demo/home/vo/user_vo.dart';
 import 'package:flutter_mvvm_demo/home/widgets/user_item_widget.dart';
 
 import '../di/injectable.dart';
