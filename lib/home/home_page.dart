@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_mvvm_demo/home/vo/user_vo.dart';
 import 'package:flutter_mvvm_demo/home/widgets/user_item_widget.dart';
 
+import '../di/injectable.dart';
 import 'bloc/home_bloc.dart';
 import 'bloc/home_state.dart';
 
@@ -35,12 +37,10 @@ class HomePage extends StatelessWidget {
           bloc.getUser();
           return ListView.builder(
               padding: const EdgeInsets.all(8),
-              itemCount: state.list.length,
+              itemCount: (state.list).users.length,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  child: UserItemWidget(
-                    user: state.list[index],
-                  ),
+                return UserItemWidget(
+                  user: (state.list).users[index],
                 );
               });
         } else {

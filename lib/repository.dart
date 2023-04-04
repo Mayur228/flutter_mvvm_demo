@@ -1,10 +1,12 @@
 import 'package:flutter_mvvm_demo/home/model/user_model.dart';
 import 'package:flutter_mvvm_demo/network/ApiSource.dart';
+import 'package:injectable/injectable.dart';
 
 abstract class UserRepository {
   Future<User> getUserData();
 }
 
+@Injectable(as: UserRepository)
 class UserRepositoryImpl implements UserRepository {
   final ApiSource apiSource;
 
@@ -13,10 +15,8 @@ class UserRepositoryImpl implements UserRepository {
   @override
   Future<User> getUserData() async{
     final response = await apiSource.init().get("apis/user");
+    final list = User.fromJson(response.data);
 
-    final list = (response.data as User);
-
-    print(response.data.toString());
     return Future.value(list);
 
   }

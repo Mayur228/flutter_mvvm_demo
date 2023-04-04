@@ -42,6 +42,7 @@ dependencies:
   injectable_generator: ^2.1.4
   dio: ^5.1.1
   get_it: ^7.2.0
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_test:

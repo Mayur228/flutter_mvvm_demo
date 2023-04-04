@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mvvm_demo/home/home_page.dart';
 
+import 'di/injectable.dart';
+
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 
